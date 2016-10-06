@@ -173,7 +173,6 @@ $navcolor:#2da034;
 .containerMain{
     max-width: 740px;
     padding: 0 10px;
-    background: #fff;
     -webkit-border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px10px 0 0;
     border-radius: 10px 10px 0 0;
@@ -509,9 +508,6 @@ $navcolor:#2da034;
 .news li{
     margin: 0 0 2.6rem;
 }
-.news li:last-child{
-    margin:0;
-}
 .news li a{
     display: block;
     font:bold 1.2rem/1.5 Arial;
@@ -736,7 +732,7 @@ $navcolor:#2da034;
         -webkit-border-radius: 10px 0 0 10px;
         -moz-border-radius: 10px 0 0 10px;
         border-radius: 10px 0 0 10px;
-        border-right: 1px solid #e1dbce;
+        
     
     }
     .content::after{
@@ -817,6 +813,7 @@ $navcolor:#2da034;
     }
     .sidebar{
         padding:2rem 2.2rem 0;
+        border-left: 1px solid #e1dbce;
 }
     .select,.signup{
         position: relative;
