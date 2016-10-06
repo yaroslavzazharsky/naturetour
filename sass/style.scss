@@ -245,42 +245,7 @@ $navcolor:#2da034;
 .slick-dots li button:before{
     content:'';
 }
-.slick-dots li:nth-child(1)::after{
-    display: block;
-    content: '1';
-    position: absolute;
-    top:2px;
-    left:40%;
-    color: #fff;
-     
-}
-.slick-dots li:nth-child(2)::after{
-    display: block;
-    content: '2';
-    position: absolute;
-    top:2px;
-    left:40%;
-    color: #fff;
-     
-}
-.slick-dots li:nth-child(3)::after{
-    display: block;
-    content: '3';
-    position: absolute;
-    top:2px;
-    left:35%;
-    color: #fff;
-     
-}
-.slick-dots li:nth-child(4)::after{
-    display: block;
-    content: '4';
-    position: absolute;
-    top:2px;
-    left:35%;
-    color: #fff;
-     
-}
+
 /*---end slider---*/
 .content .title{
     font: 2.6rem/1.5 'Zurich-Roman';
@@ -344,6 +309,7 @@ $navcolor:#2da034;
     left: 2px;
 }
 
+
 .tabsNav .ui-tabs-active{
     background: -moz-linear-gradient(top,  rgba(102,193,62,1) 0%, rgba(15,148,26,0.99) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  rgba(102,193,62,1) 0%,rgba(15,148,26,0.99) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -353,7 +319,7 @@ $navcolor:#2da034;
     box-shadow: inset 1px 1px #81de41;
     
 }
-.tabsNav .ui-tabs-active::before{
+.tabsNav .ui-tabs-active:nth-child(n)::before{
     display: block;
     content: '';
     width: 9px;
@@ -486,7 +452,7 @@ $navcolor:#2da034;
     border-top:5px solid #fff;
 }
 .form{
-    width: 50%;
+    width: 100%;
     height: 32px;
     background: -moz-linear-gradient(#FFF, #f4f3f1);
     background: -webkit-linear-gradient(#FFF, #f4f3f1);
@@ -499,7 +465,8 @@ $navcolor:#2da034;
     border-radius:4px;
     box-shadow: inset 1px 1px #cfcdc5, inset -1px -1px #cfcdc5; 
     font:1.1rem/26px Arial;
-    color: #000;  
+    color: #000; 
+    margin:0 0 1rem;
 }
 .buttonForm{
     margin: 0 0 1rem;
@@ -516,8 +483,15 @@ $navcolor:#2da034;
     text-shadow: 0 -1px #1f7e20;
     padding: 0 1rem;
     margin: 0 0 2.5rem;
-    width: 45%;
+    min-width: 35%;
     
+}
+.buttonForm.select{
+    width: 100%;
+}
+.buttonForm:hover{
+    background:#fff;
+    color:#239e22;
 }
 .signup{
     padding: 2rem 0 0 0;
@@ -542,6 +516,9 @@ $navcolor:#2da034;
     display: block;
     font:bold 1.2rem/1.5 Arial;
     color:#000;
+}
+.news li a:hover{
+    color:#ccc;
 }
 /*---------Footer-------*/
 .footer .footerTit{
@@ -625,6 +602,10 @@ $navcolor:#2da034;
     position: absolute;
     right: 10px;
     bottom: calc(50% - 10.5px);
+}
+.footerBox .social .facebook:hover{
+    color: #736c62;
+    background: #fff;
 }
 .links{
     text-align: center;
@@ -819,8 +800,11 @@ $navcolor:#2da034;
         bottom: calc(50% - 4.5px);
         left: 50px;
     }
+    .tabsNav li:first-child::before{
+        left: 40px;
+    }
     .list .item{
-        width: 220px;
+        width: calc((100% - 4.4rem) / 3);
         min-height: 300px;
         float: left;
         margin: 0 2.2rem 0 0;
